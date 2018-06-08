@@ -141,7 +141,7 @@ public class BeamFnControlClient {
   public void processInstructionRequests(Executor executor)
       throws InterruptedException, ExecutionException {
     BeamFnApi.InstructionRequest request;
-    while ((request = bufferedInstructions.take()) != POISON_PILL) {
+    while (!(request = bufferedInstructions.take()).equals(POISON_PILL)) {
       BeamFnApi.InstructionRequest currentRequest = request;
       executor.execute(
           () -> {

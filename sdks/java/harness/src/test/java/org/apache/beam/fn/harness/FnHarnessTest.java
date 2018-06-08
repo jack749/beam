@@ -57,6 +57,7 @@ public class FnHarnessTest {
       .setRegister(BeamFnApi.RegisterResponse.getDefaultInstance())
       .build();
 
+  @SuppressWarnings("FutureReturnValueIgnored")
   @Test
   public void testLaunchFnHarnessAndTeardownCleanly() throws Exception {
     PipelineOptions options = PipelineOptionsFactory.create();

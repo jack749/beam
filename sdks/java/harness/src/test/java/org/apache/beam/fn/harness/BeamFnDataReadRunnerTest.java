@@ -76,6 +76,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 /** Tests for {@link BeamFnDataReadRunner}. */
+
 @RunWith(JUnit4.class)
 public class BeamFnDataReadRunnerTest {
 
@@ -180,6 +181,7 @@ public class BeamFnDataReadRunnerTest {
     verifyNoMoreInteractions(mockBeamFnDataClient);
   }
 
+  @SuppressWarnings("FutureReturnValueIgnored")
   @Test
   public void testReuseForMultipleBundles() throws Exception {
     InboundDataClient bundle1Future = CompletableFutureInboundDataClient.create();

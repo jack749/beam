@@ -59,9 +59,11 @@ dependencies {
   compile library.java.netty_transport_native_epoll
   compile library.java.joda_time
   compile library.java.slf4j_api
+  compileOnly library.java.findbugs_annotations
   provided library.java.error_prone_annotations
   testCompile library.java.hamcrest_core
   testCompile library.java.junit
   testCompile library.java.mockito_core
   testCompile library.java.slf4j_jdk14
+  testCompileOnly library.java.findbugs_annotations
 }
